@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* DosaCafe Brand Colors */
+    --background: 33 100% 94%; /* Soft cream #fff2e2 */
+    --foreground: 0 0% 10%; /* Dark text #191919 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 199 66% 44%; /* Primary Blue #2596be */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 42 100% 58%; /* Golden Yellow #ffb229 */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 33 40% 92%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 42 100% 58%; /* Golden accent */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 33 30% 88%;
+    --input: 33 30% 88%;
+    --ring: 199 66% 44%;
+
+    --radius: 1rem;
+
+    /* Custom gradients and shadows */
+    --gradient-hero: linear-gradient(135deg, hsl(33 100% 94% / 0.95), hsl(33 100% 94% / 0));
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.08);
+    --shadow-hover: 0 8px 30px hsl(0 0% 0% / 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 33 100% 94%;
+
+    --card: 0 0% 15%;
+    --card-foreground: 33 100% 94%;
+
+    --popover: 0 0% 15%;
+    --popover-foreground: 33 100% 94%;
+
+    --primary: 199 66% 44%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 42 100% 58%;
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 42 100% 58%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 199 66% 44%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+}
